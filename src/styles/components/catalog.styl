@@ -1,0 +1,71 @@
+.catalog
+	width 100%
+
+	&__title
+		font-size 28px
+		line-height 32px
+		color $content-900
+		font-weight 600
+		padding-bottom 20px
+
+	&__top
+		position relative
+		width 100%
+		padding 32px
+		border-radius: 16px
+
+	&__top-content
+		width 100%
+		position relative
+		z-index 1
+		padding-bottom 76%
+
+	&__top-title
+		font-size 24px
+		line-height 28px
+		font-weight 600
+		color $base-white
+		padding-bottom 16px
+		text-align: left
+
+	&__top-text
+		font-size 16px
+		line-height 24px
+		color $base-white
+		font-weight 400
+		text-align: left
+
+	&__top-btn
+		background: $base-white
+		border-radius: 8px
+		border 1px solid $content-300
+		padding: 10px 55.5px
+		cursor pointer
+		position relative
+		z-index 1
+		width 100%
+
+	&__top-btn-text
+		font-size 16px
+		line-height 24px
+		font-weight 500
+		color $content-900
+
+	&__imgs-wrap
+		position: absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		border-radius inherit
+
+	&__bg-img
+		width 100%
+		height: 100%
+		border-radius inherit
+
+		& img
+			height 100%
+			object-fit: cover
+			object-position: bottom
+			border-radius inherit

@@ -1,0 +1,27 @@
+include ./_mixins
+
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(http-equiv='Content-Type' content='text/html;charset=UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+		title GameVendor
+		link(href=`../css/main.css` type="text/css" rel="stylesheet")
+
+	body(lang='en-EN')
+		.fix-box
+			.fix-box__content
+				include ./_header
+
+				main.main
+					.main__container
+						+breadcrumbs(['Home', 'Discover'], 'Games')
+
+						block page 
+			
+			include ./_footer
+	//- include ./_templates
+
+	//- 	script(src=`${baseDir}/scripts/vendor.js` type="text/javascript")
+	//- 	script(src=`${baseDir}/scripts/main.js` type="text/javascript")

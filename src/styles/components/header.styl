@@ -1,0 +1,61 @@
+.header
+  width 100%
+  background-color: $base-white
+  padding: 8px 8px 15px 8px
+
+  &__slider
+    width 100%
+    background-color: $primary-600
+    border-radius 4px
+    margin-bottom 24px
+    position relative
+  
+  &__slider-wrap
+    width 100%
+
+  &__slider-slide
+    width 100%
+    padding: 8px 28px
+    display flex
+  
+  &__slider-text
+    font-size: 14px
+    line-height: 20px
+    font-weight 400
+    color $base-white
+    display block
+    width 100%
+    text-align: center
+  
+  &__slider-btn
+    background: 0
+    border: 0
+    position absolute
+    bottom calc(50% - 5px)
+    z-index 1
+    display flex
+    align-items: center
+    width 6px
+    height 10px
+    cursor pointer
+    
+    &:disabled .header__btn-icon
+      fill $primary-500
+    
+  &__slider-btn--right
+    right: 15px
+
+  &__slider-btn--left
+    left 15px
+    transform: rotate(-180deg)
+
+  &__btn-icon
+    fill $base-white
+  
+  &__content
+    padding: 0 20px
+    display flex
+    justify-content: center
+  
+  &__logo
+    max-width: 152px

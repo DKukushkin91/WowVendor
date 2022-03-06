@@ -1,0 +1,38 @@
+footer.footer 
+  .footer__container 
+    section.footer__section.subscribe
+      .subscribe__content
+        h3.subscribe__title Join our newsletter
+        p.subscribe__text We’ll send you a nice letter one per week. No spam.
+      form.subscribe__form
+        input.subscribe__input(type="email" placeholder="Enter email")
+        button.subscribe__btn 
+          span.subscribe__btn-text Subscribe
+    .footer__menu
+      ul.footer__list
+        li.footer__item 
+          span.footer__sub-title Categories
+          ul.footer__list-link
+            each text in ['Strategy', 'Action', 'Shooter', 'Card Game', 'Simulator', 'RPG', 'Multiplayer']
+              li.footer__item-link 
+                a.footer__link(href="#")=text
+        li.footer__item 
+          span.footer__sub-title Company
+          ul.footer__list-link
+            each text in ['About us', 'Careers', 'Press', 'News', 'Contact']
+              li.footer__item-link 
+                a.footer__link(href="#")=text
+        li.footer__item 
+          span.footer__sub-title Legal
+          ul.footer__list-link
+            each text in ['Terms', 'Privacy', 'Cookies', 'Licenses', 'Settings']
+              li.footer__item-link 
+                a.footer__link(href="#")=text
+        li.footer__item 
+          span.footer__sub-title Legal
+          ul.footer__list-link
+            each text in ['Twitter', 'Facebook', 'Dribbble', 'GitHub']
+              li.footer__item-link 
+                a.footer__link(href="#")=text
+    .footer__copyright
+      p.footer__copyright-text Copyright © GameVendor, 2022
