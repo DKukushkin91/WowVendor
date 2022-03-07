@@ -1,0 +1,16 @@
+block pagination
+	section.pagination
+		.pagination__wrap
+			button.pagination__btn.pagination__btn--left(disabled)
+				svg(width="6" height="10").pagination__btn-icon
+					use(href="/img/sprite.svg#arrow")
+			button.pagination__btn.pagination__btn--active 1
+			button.pagination__btn 2
+			button.pagination__btn 3
+			button.pagination__btn 4
+			button.pagination__btn 5
+			span.pagination__btn ...
+			button.pagination__btn 99
+			button.pagination__btn.pagination__btn--right
+				svg(width="6" height="10").pagination__btn-icon
+					use(href="/img/sprite.svg#arrow")

@@ -1,0 +1,57 @@
+.pagination
+	display: none
+
+	@media $sm
+		display block
+		width 100%
+		background: $base-white
+		border-radius: 12px
+		padding: 8px
+		margin-bottom 60px
+
+	@media $xl
+		margin-bottom 82px
+
+	&__wrap
+		display flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+
+	&__btn
+		width 36px
+		height 36px
+		background: 0
+		border-radius: 8px
+		font-size 14px
+		line-height 20px
+		color $content-900
+		border: 0
+		display flex
+		align-items: center
+		justify-content: center
+		fill: $content-900
+
+		&:disabled
+			fill: $content-300
+			color: $content-300
+			cursor unset
+
+		&:not(:last-child)
+			margin-right 8px
+
+		&:not(.pagination__btn--active, :disabled):hover
+			background: $primary-50
+			color: $primary-600
+
+	&__btn span
+		color: $content-400
+		pointer-events: none
+
+	&__btn--active
+		background: $primary-600
+		color: $base-white
+		cursor unset
+
+	&__btn--left
+		transform: rotate(-180deg)

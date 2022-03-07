@@ -6,31 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>GameVendor</title>
     <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/vendor.css" type="text/css" rel="stylesheet">
   </head>
   <body lang="en-EN">
+    <nav class="mob-nav">
+      <ul class="mob-nav__list">
+        <li class="mob-nav__item"><a class="mob-nav__link mob-nav__link--active" href="#">
+            <svg class="mob-nav__icon" width="16" height="18">
+              <use href="/img/sprite.svg#home"></use>
+            </svg><span class="mob-nav__text">Home</span></a></li>
+        <li class="mob-nav__item"><a class="mob-nav__link" href="#">
+            <svg class="mob-nav__icon" width="16" height="18">
+              <use href="/img/sprite.svg#browse"></use>
+            </svg><span class="mob-nav__text">Browse</span></a></li>
+        <li class="mob-nav__item"><a class="mob-nav__link" href="#">
+            <svg class="mob-nav__icon" width="16" height="18">
+              <use href="/img/sprite.svg#search"></use>
+            </svg><span class="mob-nav__text">Search</span></a></li>
+        <li class="mob-nav__item"><a class="mob-nav__link" href="#">
+            <svg class="mob-nav__icon" width="16" height="18">
+              <use href="/img/sprite.svg#account"></use>
+            </svg><span class="mob-nav__text">Account</span></a></li>
+        <li class="mob-nav__item"><a class="mob-nav__link" href="#">
+            <svg class="mob-nav__icon" width="16" height="18">
+              <use href="/img/sprite.svg#cart"></use>
+            </svg><span class="mob-nav__text">Cart</span></a></li>
+      </ul>
+    </nav>
     <div class="fix-box">
       <div class="fix-box__content">
         <header class="header">
-          <div class="header__slider"> 
-            <div class="header__slider-wrap">
-              <div class="header__slider-slide">
-                <p class="header__slider-text">Refer a friend and get $10 off! 🔥 Offer ends February 27!</p>
+          <div class="header__slider-container">
+            <div class="header__slider">
+              <button class="header__slider-btn header__slider-btn--left" disabled>
+                <svg class="header__btn-icon" width="6" height="10">
+                  <use href="/img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="header__slider-wrap">
+                <div class="header__slider-slide">
+                  <p class="header__slider-text">Refer a friend and get $10 off! 🔥 Offer ends February 27!</p>
+                </div>
               </div>
+              <button class="header__slider-btn header__slider-btn--right">
+                <svg class="header__btn-icon" width="6" height="10">
+                  <use href="/img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
             </div>
-            <button class="header__slider-btn header__slider-btn--left" disabled>
-              <svg class="header__btn-icon" width="6" height="10">
-                <use href="/img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="header__slider-btn header__slider-btn--right">
-              <svg class="header__btn-icon" width="6" height="10">
-                <use href="/img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
           </div>
-          <div class="header__content">
-            <div class="header__logo"> <img src="/img/logo.png" alt="Game Vendor" width="152" height="24"></div>
+          <div class="header__content"><a class="header__location-link" href="#">
+              <svg class="header__icon" width="16" height="18">
+                <use href="/img/sprite.svg#pin"></use>
+              </svg><span class="header__link-text">Dublin, Republic of Ireland</span></a>
+            <div class="header__logo"><a class="header__link" href="#"><img src="/img/logo.png" alt="Game Vendor" width="152" height="24"></a></div>
+            <div class="header__icons-box"><a class="header__icons-link" href="#">
+                <svg class="header__icon" width="16" height="18">
+                  <use href="/img/sprite.svg#search"></use>
+                </svg></a><a class="header__icons-link" href="#">
+                <svg class="header__icon" width="16" height="18">
+                  <use href="/img/sprite.svg#account"></use>
+                </svg></a><a class="header__icons-link" href="#">
+                <svg class="header__icon" width="16" height="18">
+                  <use href="/img/sprite.svg#cart"></use>
+                </svg></a></div>
           </div>
+          <menu class="header__menu">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Discover</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Browse</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Store</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Platforms</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Releases</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Mobile</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Articles</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Blog</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">News</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Contacts</a></li>
+              </ul>
+            </nav>
+          </menu>
         </header>
         <main class="main">
           <div class="main__container">
@@ -44,15 +100,215 @@
             <section class="catalog">
               <h1 class="catalog__title">Games</h1>
               <div class="catalog__top">
+                <div class="catalog__bg-img">
+                  <picture>
+                    <source srcset="../img/bg-main-img.jpg" media="(min-width: 575px)" type="image/jpg"/><img src="../img/m-bg-main-img.jpg"/>
+                  </picture>
+                </div>
                 <div class="catalog__top-content">
                   <h2 class="catalog__top-title">Refer a friends and get $10 off!</h2>
                   <p class="catalog__top-text">Connect with friends. Refer a friend and unlock your $10 coupon! Offer ends February 27.</p>
+                  <button class="catalog__top-btn"><span class="catalog__top-btn-text">Invite a friend</span></button>
                 </div>
-                <button class="catalog__top-btn"><span class="catalog__top-btn-text">Invite a friend</span></button>
-                <div class="catalog__imgs-wrap">
-                  <div class="catalog__bg-img"><img src="../img/m-bg-main-img.jpg" alt=""></div>
+                <div class="catalog__top-img">
+                  <picture>
+                    <source srcset="../img/responsive/m-main-img@1x.webp 1x, ../img/responsive/m-main-img@2x.webp 2x" media="(min-width: 575px)" type="image/webp"/>
+                    <source srcset="../img/responsive/m-main-img@1x.png 1x, ../img/responsive/m-main-img@2x.png 2x" media="(min-width: 575px)" type="image/png"/>
+                    <source srcset="../img/responsive/main-img@1x.webp 1x, ../img/responsive/main-img@2x.webp 2x" type="image/webp"/>
+                    <source srcset="../img/responsive/main-img@1x.png 1x, ../img/responsive/main-img@2x.png 2x" type="image/png"/><img src="../img/responsive/main-img@1x.png"/>
+                  </picture>
                 </div>
               </div>
+              <div class="catalog__inputs">
+                <div class="catalog__search">
+                  <label class="catalog__label" for="catalog-search">Search for games</label>
+                  <div class="catalog__search-content">
+                    <input class="catalog__search-input" id="catalog-search" type="search" name="search" placeholder="Search...">
+                    <button class="catalog__search-btn">
+                      <svg class="catalog__search-icon" width="18" height="18">
+                        <use href="/img/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <form class="catalog__select-form">
+                  <div class="catalog__label">Category</div>
+                  <output class="catalog__output"><span class="catalog__output-content"><span class="catalog__output-text">+6</span></span></output>
+                </form>
+                <form class="catalog__select-form catalog__select-form--margin">
+                  <label class="catalog__label" for="category-select">Sort by</label>
+                  <div class="catalog__select-wrapper">
+                    <select class="catalog__select" id="category-select" name="category">
+                      <option class="catalog__option" selected disabled>Change sorting</option>
+                      <option class="catalog__option" value="Popular">Popular</option>
+                      <option class="catalog__option" value="Price">Price</option>
+                    </select>
+                  </div>
+                </form>
+                <div class="catalog__filters">
+                  <button class="catalog__filters-btn">
+                    <svg class="catalog__filters-icon" width="18" height="12">
+                      <use href="/img/sprite.svg#filter-line"></use>
+                    </svg><span class="catalog__filters-text">Filters</span>
+                  </button>
+                </div>
+                <div class="catalog__category-wrap swiper js-swiper-category">
+                  <ul class="catalog__category-list swiper-wrapper">
+                    <li class="catalog__category-item swiper-slide"><span class="catalog__category-text">Strategy</span>
+                      <button class="catalog__category-btn">
+                        <svg class="catalog__category-icon" width="8" height="8">
+                          <use href="/img/sprite.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="catalog__category-item swiper-slide"><span class="catalog__category-text">RPG</span>
+                      <button class="catalog__category-btn">
+                        <svg class="catalog__category-icon" width="8" height="8">
+                          <use href="/img/sprite.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="catalog__category-item swiper-slide"><span class="catalog__category-text">Action</span>
+                      <button class="catalog__category-btn">
+                        <svg class="catalog__category-icon" width="8" height="8">
+                          <use href="/img/sprite.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="catalog__category-item swiper-slide"><span class="catalog__category-text">Shooter</span>
+                      <button class="catalog__category-btn">
+                        <svg class="catalog__category-icon" width="8" height="8">
+                          <use href="/img/sprite.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="catalog__category-item swiper-slide"><span class="catalog__category-text">Clear all</span>
+                      <button class="catalog__category-btn">
+                        <svg class="catalog__category-icon" width="8" height="8">
+                          <use href="/img/sprite.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog__list-wrap">
+                <ul class="catalog__list js-item-list">
+                  <li class="catalog__item js-item-insert">
+                    <p class="catalog__item-text">You can add a product card by clicking on the button</p>
+                    <button class="catalog__item-btn js-catalog-btn">
+                      <svg class="catalog__icon" width="18" height="18">
+                        <use href="/img/sprite.svg#cross-circle"></use>
+                      </svg><span class="catalog__btn-text">Add card</span>
+                    </button>
+                  </li>
+                </ul>
+                <button class="catalog__list-btn"><span class="catalog__list-btn-text">Show more</span></button>
+              </div>
+            </section>
+            <section class="pagination">
+              <div class="pagination__wrap">
+                <button class="pagination__btn pagination__btn--left" disabled>
+                  <svg class="pagination__btn-icon" width="6" height="10">
+                    <use href="/img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+                <button class="pagination__btn pagination__btn--active">1</button>
+                <button class="pagination__btn">2</button>
+                <button class="pagination__btn">3</button>
+                <button class="pagination__btn">4</button>
+                <button class="pagination__btn">5</button><span class="pagination__btn">...</span>
+                <button class="pagination__btn">99</button>
+                <button class="pagination__btn pagination__btn--right">
+                  <svg class="pagination__btn-icon" width="6" height="10">
+                    <use href="/img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </section>
+            <section class="faq">
+              <h2 class="faq__title">Frequently asked questions</h2>
+              <p class="faq__sub-title">Everything you need to know about the games.</p>
+              <fieldset class="faq__fieldset">
+                <legend class="faq__legend"><span class="faq__legend-text">How does work?</span>
+                  <button class="faq__btn js-faq-btn">
+                    <svg class="faq__icon" width="18" height="18">
+                      <use href="/img/sprite.svg#cross-circle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="faq__content js-faq-content">
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                  <ul class="faq__list">
+                    <li class="faq__item">motion sensing device,</li>
+                    <li class="faq__item">controller,</li>
+                    <li class="faq__item">keyboard,</li>
+                    <li class="faq__item">joystick.</li>
+                  </ul>
+                  <p class="faq__text faq__text--bold">Visual feedback.</p>
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                </div>
+              </fieldset>
+              <fieldset class="faq__fieldset">
+                <legend class="faq__legend"><span class="faq__legend-text">What is a game?</span>
+                  <button class="faq__btn js-faq-btn">
+                    <svg class="faq__icon" width="18" height="18">
+                      <use href="/img/sprite.svg#cross-circle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="faq__content js-faq-content">
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                  <ul class="faq__list">
+                    <li class="faq__item">motion sensing device,</li>
+                    <li class="faq__item">controller,</li>
+                    <li class="faq__item">keyboard,</li>
+                    <li class="faq__item">joystick.</li>
+                  </ul>
+                  <p class="faq__text faq__text--bold">Visual feedback.</p>
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                </div>
+              </fieldset>
+              <fieldset class="faq__fieldset">
+                <legend class="faq__legend"><span class="faq__legend-text">Is there a free trial available?</span>
+                  <button class="faq__btn js-faq-btn">
+                    <svg class="faq__icon" width="18" height="18">
+                      <use href="/img/sprite.svg#cross-circle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="faq__content js-faq-content">
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                  <ul class="faq__list">
+                    <li class="faq__item">motion sensing device,</li>
+                    <li class="faq__item">controller,</li>
+                    <li class="faq__item">keyboard,</li>
+                    <li class="faq__item">joystick.</li>
+                  </ul>
+                  <p class="faq__text faq__text--bold">Visual feedback.</p>
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                </div>
+              </fieldset>
+              <fieldset class="faq__fieldset">
+                <legend class="faq__legend"><span class="faq__legend-text">How does billing work?</span>
+                  <button class="faq__btn js-faq-btn">
+                    <svg class="faq__icon" width="18" height="18">
+                      <use href="/img/sprite.svg#cross-circle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="faq__content js-faq-content">
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.</p>
+                  <ul class="faq__list">
+                    <li class="faq__item">motion sensing device,</li>
+                    <li class="faq__item">controller,</li>
+                    <li class="faq__item">keyboard,</li>
+                    <li class="faq__item">joystick.</li>
+                  </ul>
+                  <p class="faq__text faq__text--bold">Visual feedback.</p>
+                  <p class="faq__text">A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.</p>
+                </div>
+              </fieldset>
             </section>
           </div>
         </main>
@@ -116,5 +372,19 @@
         </div>
       </footer>
     </div>
+    <template class="js-template-item">
+      <li class="catalog__item"><a class="catalog__item-link" href="#">
+          <div class="catalog__item-img"><img class="js-item-img" src="" alt=""></div>
+          <div class="catalog__item-content"><span class="catalog__item-mark js-item-mark"></span>
+            <h3 class="catalog__item-title js-item-title"></h3>
+            <div class="catalog__raiting-wrap">
+              <div class="catalog__raiting-imgs"><span class="catalog__item-raiting"><img src="/img/stars.png"></span><span class="catalog__active-raiting js-item-raiting"><img src="/img/active-stars.png"></span></div><span class="catalog__raiting-count js-item-vote"></span>
+            </div>
+            <p class="catalog__item-sub js-item-description"></p>
+          </div>
+          <div class="catalog__item-price-box"><span class="catalog__item-sale js-item-old-price"></span><span class="catalog__item-price js-item-price"></span><span class="catalog__item-sale-mark js-item-sale"></span></div></a></li>
+    </template>
   </body>
+  <script src="../scripts/vendor.js" type="text/javascript"></script>
+  <script src="../scripts/main.js" type="text/javascript"></script>
 </html>

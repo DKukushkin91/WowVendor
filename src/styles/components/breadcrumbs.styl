@@ -4,10 +4,16 @@
 	&__list
 		margin 0
 		padding 0
-		padding-bottom 16px
+		padding-bottom 13px
 		list-style: none
 		display flex
 		flex-direction: row
+
+		@media $md
+			padding-bottom 15px
+
+		@media $xl
+			padding-bottom 29px
 
 	&__item
 		display inline-block

@@ -1,0 +1,654 @@
+.catalog
+	width 100%
+
+	&__title
+		font-size 28px
+		line-height 32px
+		color $content-900
+		font-weight 600
+		padding-bottom 20px
+
+		@media $md
+			font-size 52px
+			line-height 56px
+			padding-bottom 32px
+
+		@media $xl
+			padding-bottom 40px
+
+	&__top
+		position relative
+		width 100%
+		padding 32px
+		border-radius: 16px
+		margin-bottom 29px
+
+		@media $sm
+			overflow: hidden
+
+		@media $md
+			padding: 40px
+			margin-bottom 37px
+
+		@media $lg
+			padding: 60px
+
+		@media $xl
+			padding 71px
+			overflow: unset
+			margin-bottom 59px
+
+	&__top-content
+		width 100%
+		position relative
+		z-index 1
+
+		@media $sm
+			width 40%
+
+		@media $md
+			width 45.6%
+
+		@media $lg
+			width 100%
+			max-width: 312px
+
+	&__top-title
+		font-size 24px
+		line-height 28px
+		font-weight 600
+		color $base-white
+		padding-bottom 16px
+		text-align: left
+
+		@media $md
+			font-size 32px
+			line-height 38px
+			padding-bottom 20px
+
+		@media $lg
+			font-size 40px
+			line-height 44px
+			padding-bottom 28px
+
+	&__top-text
+		font-size 16px
+		line-height 24px
+		color $base-white
+		font-weight 400
+		text-align: left
+		padding-bottom 78.8%
+
+		@media $sm
+			padding-bottom 32px
+
+	&__top-btn
+		background: $base-white
+		border-radius: 8px
+		border 1px solid $content-300
+		padding: 10px 54.5px
+		cursor pointer
+		position relative
+		z-index 1
+		width 100%
+
+		@media $sm
+			padding 10px
+
+		@media $md
+			max-width: 141px
+
+	&__top-btn-text
+		font-size 16px
+		line-height 24px
+		font-weight 500
+		color $content-900
+
+	&__bg-img
+		width 100%
+		height: 100%
+		border-radius 16px
+		position: absolute
+		top 0
+		left 0
+
+		& picture
+			height 100%
+			width 100%
+			border-radius: inherit
+
+		& img
+			height 100%
+			object-fit: cover
+			border-radius inherit
+
+			@media $sm
+				object-position: left
+
+			@media $lg
+				object-position: 50%
+
+	&__top-img
+		display: none
+
+		& img,
+		& picture
+			height 100%
+			object-fit: contain
+			object-position: bottom
+
+		@media $sm
+			display block
+			width 69%
+			height 100%
+			position absolute
+			bottom 0
+			right -32px
+
+		@media $md
+			width 71%
+			right -9.2%
+
+		@media $lg
+			right 0
+			width 69%
+
+		@media $xl
+			width 58.4%
+			right: 93px
+			height auto
+
+	&__inputs
+		width 100%
+		padding-bottom 40px
+
+		@media $md
+			display flex
+			flex-direction: row
+			flex-wrap: wrap
+
+	&__search
+		padding-bottom 16px
+
+		@media $md
+			flex: 2
+			margin-right: 16px
+			padding-bottom 20px
+
+		@media $xl
+			padding-bottom 33px
+
+	&__label
+		font-size 14px
+		line-height 20px
+		font-weight 500
+		padding-bottom 4px
+		color $content-500
+		cursor pointer
+
+	&__search-content
+		width 100%
+		position relative
+
+	&__search-input
+		width 100%
+		border: 1px solid $content-300
+		background: $base-white
+		border-radius: 8px
+		padding: 9px 18px 9px 46px
+		font-size 16px
+		line-height 24px
+		font-weight 500
+		color $content-800
+		outline: none
+
+		&::placeholder
+			color $content-400
+
+		&:focus
+			border-color: $content-400
+
+	&__search-btn
+		position: absolute
+		top calc(50% - 9px)
+		left 18px
+		width 18px
+		height 18px
+		border 0
+		background: 0
+
+	&__search-icon
+		fill: $content-400
+
+	&__filters
+		width 100%
+		padding-bottom 16px
+
+		@media $md
+			display none
+
+	&__filters-btn
+		width 100%
+		border: 1px solid $content-300
+		background: $base-white
+		border-radius: 8px
+		text-align: center
+		display block
+		padding 8.5px 18px
+
+	&__filters-text
+		font-size 16px
+		line-height 24px
+		color $content-900
+		font-weight 500
+		display: inline-block
+		vertical-align: middle
+
+	&__filters-icon
+		fill: $content-900
+		display inline-block
+		vertical-align middle
+		margin-right 10px
+
+	&__category-wrap
+		width 100%
+
+		&.swiper
+			overflow: unset
+
+	&__category-list
+		list-style: none
+		padding 0
+		margin 0
+
+	&__category-item
+		background-color: $primary-100
+		text-align: center
+		border-radius: 8px
+		display inline-flex
+		align-items: center
+		justify-content: center
+		padding: 10px 22px 10px 16px
+
+		&.swiper-slide
+			flex-shrink: 1
+			max-width: min-content
+
+	&__category-text
+		font-size 14px
+		line-height 20px
+		font-weight 500
+		color $primary-600
+		margin-right 14px
+		white-space nowrap
+
+	&__category-btn
+		background: 0
+		border 0
+		width 8px
+		height 8px
+		display flex
+		align-items: center
+
+	&__category-icon
+		fill $primary-600
+
+	&__list-wrap
+		padding-bottom 60px
+
+		@media $md
+			padding-bottom 28px
+
+		@media $xl
+			padding-bottom 12px
+
+	&__list
+		padding 0
+		margin 0
+		list-style: none
+		display grid
+		grid-template-columns: repeat(auto-fill, minmax(190px, auto))
+		justify-content: center
+		grid-row-gap: 16px
+		grid-column-gap: 16px
+
+		&:not(:last-child)
+			padding-bottom 32px
+
+		@media $md
+			grid-template-columns: repeat(auto-fill, minmax(230px, auto))
+			grid-row-gap: 32px
+			grid-column-gap: 32px
+
+
+	&__item
+		border-radius: 12px
+		position relative
+
+	&__item:first-child
+		background: transparent
+		border: 1px dashed $primary-300
+		padding: 44px
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+		@media $s
+			padding: 22px
+
+	&__item-text
+		font-size 14px
+		line-height 20px
+		color $content-400
+		font-weight 400
+		padding-bottom 20px
+
+	&__item-btn
+		background: $primary-600
+		border-radius: 8px
+		padding: 10px
+		width 100%
+		max-width: 256px
+		border: 0
+		display inline-flex
+		align-items: center
+		justify-content: center
+
+		@media $xl
+			max-width: 192px
+
+	&__icon
+		width 18px
+		height 18px
+		fill: $base-white
+		margin-right 8px
+
+	&__btn-text
+		font-size 16px
+		line-height 24px
+		color $base-white
+		font-weight 500
+		position relative
+
+	&__list-btn
+		background: $base-white
+		border: 1px solid  $content-300
+		padding: 10px
+		width 100%
+		border-radius: 8px
+
+		@media $sm
+			display none
+
+	&__list-btn-text
+		text-align: center
+		font-size 16px
+		line-height 24px
+		color $content-900
+		font-weight 500
+
+	&__item-link
+		display flex
+		flex-direction: column
+		width 100%
+		height 100%
+		text-decoration: none
+		background: $base-white
+		padding: 12px 12px 21px 12px
+		border-radius: inherit
+
+	&__item-img
+		border-radius: 8px
+		width 100%
+		margin-bottom 16px
+
+		& img
+			border-radius: inherit
+
+			@media $md
+				height 100%
+				object-fit: cover
+				object-position: top
+
+		@media $md
+			height: 200px
+
+	&__item-content
+		width 100%
+		padding: 0 12px 16px 12px
+		margin-bottom 17px
+		flex: 1 0 auto
+		position relative
+
+		&::after
+			content: ''
+			position absolute
+			height 1px
+			width calc(100% - 24px)
+			background-color: $content-200
+			bottom 0
+			right 0
+			transform: translate(-12px)
+
+	&__item-mark
+		position relative
+		border-radius: 4px
+		padding: 2px 8px
+		font-size 12px
+		line-height 18px
+		font-weight 400
+		display inline-flex
+		align-items: center
+		margin-bottom 12px
+
+		&::before
+			content: ''
+			width 6px
+			height 6px
+			border-radius: 50%
+			margin-right 6px
+
+		&--ActionRPG
+			background-color: $blue-50
+			color $blue-600
+
+			&::before
+				background-color: $blue-600
+
+		&--MultiplayerRPG
+			background-color: $red-50
+			color $red-600
+
+			&::before
+				background-color: $red-600
+
+		&--Action
+			background-color: $orange-50
+			color $orange-600
+
+			&::before
+				background-color: $orange-600
+
+		&--Shooter
+			background-color: $primary-50
+			color $primary-600
+
+			&::before
+				background-color: $primary-600
+
+		&--CardGame
+			background-color: $green-50
+			color $green-600
+
+			&::before
+				background-color: $green-600
+
+	&__item-title
+		font-size 18px
+		line-height 24px
+		font-weight 600
+		color $content-900
+		padding-bottom 9px
+
+	&__raiting-wrap
+		display inline-flex
+		align-items: center
+		padding-bottom 11px
+
+	&__raiting-imgs
+		position relative
+		width 78px
+		margin-right 8px
+
+	&__item-raiting
+		width 77px
+		display block
+
+	&__active-raiting
+		position: absolute
+		top calc(50% - 6px)
+		left 0
+		width 100%
+		display block
+		overflow: hidden
+
+		& img
+			width auto
+
+	&__raiting-count
+		font-size 12px
+		line-height 18px
+		font-weight 400
+		color $content-600
+
+	&__item-sub
+		font-size 14px
+		line-height 20px
+		font-weight 400
+		color $content-400
+
+	&__item-price-box
+		display flex
+		align-items: center
+		justify-content: flex-start
+		min-height: 24px
+		padding 0 12px
+
+	&__item-sale
+		font-size 16px
+		line-height 24px
+		text-decoration: line-through
+		color $content-300
+		font-weight 500
+		margin-right 8px
+
+	&__item-price
+		font-size 16px
+		line-height 24px
+		font-weight 600
+		color $content-900
+		margin-right auto
+
+	&__item-sale-mark
+		background-color: $lime
+		padding: 4px 6px
+		font-size 12px
+		line-height 18px
+		color $base-white
+		font-weight 600
+		border-radius: 4px
+
+	&__select-form
+		display: none
+
+		@media $md
+			display: block
+			flex-basis: 296px
+			flex: 1
+			padding-bottom 20px
+			margin-right 16px
+
+		@media $xl
+			padding-bottom 33px
+
+	&__select-form--margin
+		margin-right 0
+
+	&__output
+		background: $base-white
+		border-radius: 8px
+		padding: 10px 10px
+		border: 1px solid $content-300
+		display flex
+		align-items: center
+		position relative
+
+		&::after
+			content: ''
+			width 11px
+			height 6px
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L4.43431 5.56569C4.74673 5.8781 5.25327 5.8781 5.56569 5.56569L5 5ZM9.56569 1.56569C9.8781 1.25327 9.8781 0.746734 9.56569 0.434314C9.25327 0.121895 8.74673 0.121895 8.43431 0.434314L9.56569 1.56569ZM1.56569 0.434315C1.25327 0.121895 0.746734 0.121895 0.434314 0.434315C0.121895 0.746734 0.121895 1.25327 0.434314 1.56569L1.56569 0.434315ZM8.43431 0.434314L4.43431 4.43431L5.56569 5.56569L9.56569 1.56569L8.43431 0.434314ZM5.56569 4.43431L1.56569 0.434315L0.434314 1.56569L4.43431 5.56569L5.56569 4.43431Z' fill='%23101828'/%3E%3C/svg%3E%0A");			background-repeat: no-repeat
+			background-position: center
+			cursor pointer
+
+	&__output-content
+		width 100%
+		display flex
+		align-items: center
+		flex-wrap: wrap
+
+	&__output-text
+		background: $primary-50
+		border-radius: 4px
+		padding: 2px 8px
+		font-size 12px
+		line-height 18px
+		color $primary-600
+		position relative
+		display: inline-flex
+		align-items: center
+		cursor pointer
+
+		&::after
+			content: ''
+			background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75365 0.953529C5.94891 0.758267 5.94891 0.441684 5.75365 0.246422C5.55839 0.05116 5.24181 0.05116 5.04654 0.246422L5.75365 0.953529ZM0.246544 5.04642C0.0512821 5.24168 0.0512821 5.55827 0.246544 5.75353C0.441806 5.94879 0.758389 5.94879 0.953651 5.75353L0.246544 5.04642ZM0.953651 0.246422C0.758389 0.05116 0.441806 0.05116 0.246544 0.246422C0.0512821 0.441684 0.0512821 0.758267 0.246544 0.953529L0.953651 0.246422ZM5.04654 5.75353C5.24181 5.94879 5.55839 5.94879 5.75365 5.75353C5.94891 5.55827 5.94891 5.24168 5.75365 5.04642L5.04654 5.75353ZM5.04654 0.246422L0.246544 5.04642L0.953651 5.75353L5.75365 0.953529L5.04654 0.246422ZM0.246544 0.953529L5.04654 5.75353L5.75365 5.04642L0.953651 0.246422L0.246544 0.953529Z' fill='%237F56D9'/%3E%3C/svg%3E%0A");
+			width 6px
+			height 6px
+			background-repeat: no-repeat
+			background-position: center
+			margin-left 10px
+			position relative
+
+	&__select-wrapper
+		position relative
+
+		&::after
+			content: ''
+			width 11px
+			height 6px
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L4.43431 5.56569C4.74673 5.8781 5.25327 5.8781 5.56569 5.56569L5 5ZM9.56569 1.56569C9.8781 1.25327 9.8781 0.746734 9.56569 0.434314C9.25327 0.121895 8.74673 0.121895 8.43431 0.434314L9.56569 1.56569ZM1.56569 0.434315C1.25327 0.121895 0.746734 0.121895 0.434314 0.434315C0.121895 0.746734 0.121895 1.25327 0.434314 1.56569L1.56569 0.434315ZM8.43431 0.434314L4.43431 4.43431L5.56569 5.56569L9.56569 1.56569L8.43431 0.434314ZM5.56569 4.43431L1.56569 0.434315L0.434314 1.56569L4.43431 5.56569L5.56569 4.43431Z' fill='%23101828'/%3E%3C/svg%3E%0A");			background-repeat: no-repeat
+			background-position: center
+			cursor pointer
+			position: absolute
+			right: 18px
+			top calc(50% - 3px)
+			pointer-events: none
+
+	&__select
+		background: $base-white
+		border: 1px solid $content-300
+		border-radius: 8px
+		padding: 10px 18px
+		font-size 16px
+		line-height 24px
+		font-weight 500
+		color $content-900
+		appearance: none
+		position relative
+		width 100%
+		cursor pointer
+
+	&__option
+		padding: 0

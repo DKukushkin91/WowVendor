@@ -1,14 +1,36 @@
 header.header
-	.header__slider 
-		.header__slider-wrap
-			.header__slider-slide
-				p.header__slider-text Refer a friend and get $10 off! 🔥 Offer ends February 27!
-		button.header__slider-btn.header__slider-btn--left(disabled)
-			svg(width="6" height="10").header__btn-icon
-				use(href="/img/sprite.svg#arrow")
-		button.header__slider-btn.header__slider-btn--right
-			svg(width="6" height="10").header__btn-icon
-				use(href="/img/sprite.svg#arrow")
+	.header__slider-container
+		.header__slider
+			button.header__slider-btn.header__slider-btn--left(disabled)
+				svg(width="6" height="10").header__btn-icon
+					use(href="/img/sprite.svg#arrow")
+			.header__slider-wrap
+				.header__slider-slide
+					p.header__slider-text Refer a friend and get $10 off! 🔥 Offer ends February 27!
+			button.header__slider-btn.header__slider-btn--right
+				svg(width="6" height="10").header__btn-icon
+					use(href="/img/sprite.svg#arrow")
 	.header__content
-		.header__logo 
-			img(src="/img/logo.png", alt="Game Vendor", width="152", height="24")
+		a.header__location-link(href="#")
+			svg(width="16" height="18").header__icon
+				use(href="/img/sprite.svg#pin")
+			span.header__link-text Dublin, Republic of Ireland
+		.header__logo
+			a.header__link(href="#")
+				img(src="/img/logo.png", alt="Game Vendor", width="152", height="24")
+		.header__icons-box
+			a.header__icons-link(href="#")
+				svg(width="16" height="18").header__icon
+					use(href="/img/sprite.svg#search")
+			a.header__icons-link(href="#")
+				svg(width="16" height="18").header__icon
+					use(href="/img/sprite.svg#account")
+			a.header__icons-link(href="#")
+				svg(width="16" height="18").header__icon
+					use(href="/img/sprite.svg#cart")
+	menu.header__menu
+		nav.header__nav
+			ul.header__nav-list
+				each text in ['Discover', 'Browse', 'Store', 'Platforms', 'Releases', 'Mobile', 'Articles', 'Blog', 'News', 'Contacts']
+					li.header__nav-item
+						a.header__nav-link(href="#")=text

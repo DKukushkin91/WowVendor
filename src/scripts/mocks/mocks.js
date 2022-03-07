@@ -1,0 +1,156 @@
+export const items = [
+	{
+		img: 'img-1.jpg',
+		mark: 'Action RPG',
+		title: 'Saints Row',
+		raiting: 0,
+		vote: 0,
+		description: 'Platinum Edition',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-2.jpg',
+		mark: 'Multiplayer RPG',
+		title: 'Paladins',
+		raiting: 4,
+		vote: 1820,
+		description: 'Get the Captain Price Operator included with purchase',
+		prevPrice: ``,
+		price: 'Free',
+		markSale: ``
+	},
+	{
+		img: 'img-3.jpg',
+		mark: 'Action',
+		title: 'Far Cry 6',
+		raiting: 4,
+		vote: 2888,
+		description: 'In-Game Content',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-4.jpg',
+		mark: 'Shooter',
+		title: 'Call of Duty: Warzone',
+		raiting: 3,
+		vote: 18982,
+		description: 'Get the Captain Price Operator included with purchase',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-5.jpg',
+		mark: 'Action',
+		title: 'World of Warcraft: Shadowlands',
+		raiting: 3.5,
+		vote: 299,
+		description: 'Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!',
+		prevPrice: ``,
+		price: 'Free',
+		markSale: ``
+	},
+	{
+		img: 'img-6.jpg',
+		mark: 'Shooter',
+		title: 'Fortnite',
+		raiting: 4.5,
+		vote: 9199,
+		description: 'Get the Captain Price Operator included with purchase',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-7.jpg',
+		mark: 'Action RPG',
+		title: 'Horizon: Forbidden West',
+		raiting: 4.5,
+		vote: 9199,
+		description: 'Platinum Edition',
+		prevPrice: 1299,
+		price: 649,
+		markSale: ``
+	},
+	{
+		img: 'img-8.jpg',
+		mark: 'Action',
+		title: 'Need for Speed: Heat',
+		raiting: 4.5,
+		vote: 2911,
+		description: 'Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!',
+		prevPrice: ``,
+		price: 649,
+		markSale: ``
+	},
+	{
+		img: 'img-9.jpg',
+		mark: 'Action',
+		title: 'Spider-Man: Miles Morales',
+		raiting: 3,
+		vote: 920,
+		description: 'Get the Captain Price Operator included with purchase',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-10.jpg',
+		mark: 'Card Game',
+		title: 'Witcher 3: Wild Hunt',
+		raiting: 5,
+		vote: 299890,
+		description: 'Will only be usable in the new Classic Format when it is released',
+		prevPrice: 1299,
+		price: 649,
+		markSale: ``
+	},
+	{
+		img: 'img-11.jpg',
+		mark: 'Shooter',
+		title: 'Guardians of the Galaxy',
+		raiting: 3,
+		vote: 29,
+		description: 'In-Game Content',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-12.jpg',
+		mark: 'Shooter',
+		title: 'Crash Team Racing',
+		raiting: 4.5,
+		vote: 1820,
+		description: 'Get the Captain Price Operator included with purchase',
+		prevPrice: 1299,
+		price: 649,
+		markSale: 50
+	},
+	{
+		img: 'img-13.jpg',
+		mark: 'Multiplayer RPG',
+		title: 'Spider-Man',
+		raiting: 4.5,
+		vote: 9199,
+		description: 'Includes access to World of Warcraft, Burning Crusade Classic, and WoW Classic!',
+		prevPrice: ``,
+		price: 649,
+		markSale: ``
+	},
+	{
+		img: 'img-14.jpg',
+		mark: 'Action RPG',
+		title: 'Dragon Age 5',
+		raiting: 0,
+		vote: 0,
+		description: 'Dragon Age 5',
+		prevPrice: ``,
+		price: ``,
+		markSale: ``
+	},
+]

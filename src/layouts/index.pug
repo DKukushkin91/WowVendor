@@ -4,11 +4,121 @@ block page
 	section.catalog
 		h1.catalog__title Games
 		.catalog__top
+			.catalog__bg-img
+				+bg-picture('bg-main-img', '..')
 			.catalog__top-content
 				h2.catalog__top-title Refer a friends and get $10 off!
 				p.catalog__top-text Connect with friends. Refer a friend and unlock your $10 coupon! Offer ends February 27.
-			button.catalog__top-btn
-				span.catalog__top-btn-text Invite a friend
-			.catalog__imgs-wrap
-				.catalog__bg-img
-					img(src="../img/m-bg-main-img.jpg", alt="")
+				button.catalog__top-btn
+					span.catalog__top-btn-text Invite a friend
+			.catalog__top-img
+				+picture('main-img', '..')
+		.catalog__inputs
+			.catalog__search
+				label.catalog__label(for="catalog-search") Search for games
+				.catalog__search-content
+					input#catalog-search.catalog__search-input(type="search", name="search", placeholder="Search...")
+					button.catalog__search-btn
+						svg(width="18" height="18").catalog__search-icon
+							use(href="/img/sprite.svg#search")
+			form.catalog__select-form
+				.catalog__label Category
+				output.catalog__output
+					span.catalog__output-content
+						span.catalog__output-text +6
+			form.catalog__select-form.catalog__select-form--margin
+				label.catalog__label(for="category-select") Sort by
+				.catalog__select-wrapper
+					select#category-select.catalog__select(name="category")
+						option.catalog__option(selected disabled) Change sorting
+						each value in ['Popular', 'Price']
+							option.catalog__option(value=`${value}`)=value
+			.catalog__filters
+				button.catalog__filters-btn
+					svg(width="18" height="12").catalog__filters-icon
+							use(href="/img/sprite.svg#filter-line")
+					span.catalog__filters-text Filters
+			.catalog__category-wrap.swiper.js-swiper-category
+				ul.catalog__category-list.swiper-wrapper
+					each name in ['Strategy', 'RPG', 'Action', 'Shooter', 'Clear all']
+						li.catalog__category-item.swiper-slide
+							span.catalog__category-text=name
+							button.catalog__category-btn
+								svg(width="8" height="8").catalog__category-icon
+									use(href="/img/sprite.svg#cross")
+		.catalog__list-wrap
+			ul.catalog__list.js-item-list
+				li.catalog__item.js-item-insert
+					p.catalog__item-text You can add a product card by clicking on the button
+					button.catalog__item-btn.js-catalog-btn
+						svg(width="18" height="18").catalog__icon
+							use(href="/img/sprite.svg#cross-circle")
+						span.catalog__btn-text Add card
+			button.catalog__list-btn
+				span.catalog__list-btn-text Show more
+
+	include ../templates/_pagination
+
+	section.faq
+		h2.faq__title Frequently asked questions
+		p.faq__sub-title Everything you need to know about the games.
+		fieldset.faq__fieldset
+			legend.faq__legend
+				span.faq__legend-text How does work?
+				button.faq__btn.js-faq-btn
+					svg(width="18" height="18").faq__icon
+						use(href="/img/sprite.svg#cross-circle")
+			.faq__content.js-faq-content
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.
+				ul.faq__list
+					li.faq__item motion sensing device,
+					li.faq__item controller,
+					li.faq__item keyboard,
+					li.faq__item joystick.
+				p.faq__text.faq__text--bold Visual feedback.
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.
+		fieldset.faq__fieldset
+			legend.faq__legend
+				span.faq__legend-text What is a game?
+				button.faq__btn.js-faq-btn
+					svg(width="18" height="18").faq__icon
+						use(href="/img/sprite.svg#cross-circle")
+			.faq__content.js-faq-content
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.
+				ul.faq__list
+					li.faq__item motion sensing device,
+					li.faq__item controller,
+					li.faq__item keyboard,
+					li.faq__item joystick.
+				p.faq__text.faq__text--bold Visual feedback.
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.
+		fieldset.faq__fieldset
+			legend.faq__legend
+				span.faq__legend-text Is there a free trial available?
+				button.faq__btn.js-faq-btn
+					svg(width="18" height="18").faq__icon
+						use(href="/img/sprite.svg#cross-circle")
+			.faq__content.js-faq-content
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.
+				ul.faq__list
+					li.faq__item motion sensing device,
+					li.faq__item controller,
+					li.faq__item keyboard,
+					li.faq__item joystick.
+				p.faq__text.faq__text--bold Visual feedback.
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.
+		fieldset.faq__fieldset
+			legend.faq__legend
+				span.faq__legend-text How does billing work?
+				button.faq__btn.js-faq-btn
+					svg(width="18" height="18").faq__icon
+						use(href="/img/sprite.svg#cross-circle")
+			.faq__content.js-faq-content
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.
+				ul.faq__list
+					li.faq__item motion sensing device,
+					li.faq__item controller,
+					li.faq__item keyboard,
+					li.faq__item joystick.
+				p.faq__text.faq__text--bold Visual feedback.
+				p.faq__text A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.

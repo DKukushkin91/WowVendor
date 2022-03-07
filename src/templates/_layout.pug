@@ -8,8 +8,11 @@ html(lang='en')
 		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
 		title GameVendor
 		link(href=`../css/main.css` type="text/css" rel="stylesheet")
+		link(href=`../css/vendor.css` type="text/css" rel="stylesheet")
 
 	body(lang='en-EN')
+		include ./_mob-nav
+
 		.fix-box
 			.fix-box__content
 				include ./_header
@@ -18,10 +21,11 @@ html(lang='en')
 					.main__container
 						+breadcrumbs(['Home', 'Discover'], 'Games')
 
-						block page 
-			
-			include ./_footer
-	//- include ./_templates
+						block page
 
-	//- 	script(src=`${baseDir}/scripts/vendor.js` type="text/javascript")
-	//- 	script(src=`${baseDir}/scripts/main.js` type="text/javascript")
+			include ./_footer
+
+		include ./_templates
+
+	script(src=`../scripts/vendor.js` type="text/javascript")
+	script(src=`../scripts/main.js` type="text/javascript")

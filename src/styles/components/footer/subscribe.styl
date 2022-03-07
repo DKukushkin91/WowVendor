@@ -2,25 +2,50 @@
 	border-bottom: 1px solid $content-700
 	margin-bottom 32px
 
+	@media $lg
+		display flex
+		padding-bottom 56px
+
+	@media $md
+		margin-bottom 54px
+
 	&__content
 		padding-bottom 32px
-		
+
+		@media $md
+			padding-bottom 29px
+
+		@media $lg
+			padding-bottom 0
+			flex 1 1 50%
+			margin-right 40px
+
 	&__title
 		font-size: 18px
 		line-height 24px
 		padding-bottom 4px
 		color $base-white
 		font-weight 600
-	
+
 	&__text
 		font-size: 16px
 		line-height 24px
 		font-weight 400
 		color $content-400
-	
+
 	&__form
 		width 100%
 		padding-bottom 33px
+
+		@media $sm
+			display flex
+
+		@media $md
+			padding-bottom 57px
+
+		@media $lg
+			flex 1 1 50%
+			padding-bottom 0
 
 	&__input
 		width 100%
@@ -42,18 +67,28 @@
 		&:focus
 			border-color: $content-400
 
+		@media $sm
+			flex: 1 1 72%
+			margin 0
+			margin-right 8px
+
+		@media $md
+			flex 1 1 120%
+
 	&__btn
 		border: 0
 		background-color: $primary-600
 		border-radius: 8px
 		width 100%
-		padding: 10px 101px
+		padding: 10px
 		display block
 		text-align: center
-	
+
+		@media $sm
+			flex: 1 1 22%
+
 	&__btn-text
 		font-size 16px
 		line-height 24px
 		font-weight 500
 		color $base-white
-		

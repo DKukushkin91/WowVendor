@@ -1,61 +1,185 @@
 .header
-  width 100%
-  background-color: $base-white
-  padding: 8px 8px 15px 8px
+	width 100%
+	background-color: $base-white
+	padding: 8px 0 15px 0
 
-  &__slider
-    width 100%
-    background-color: $primary-600
-    border-radius 4px
-    margin-bottom 24px
-    position relative
-  
-  &__slider-wrap
-    width 100%
+	@media $lg
+		padding-bottom 20px
 
-  &__slider-slide
-    width 100%
-    padding: 8px 28px
-    display flex
-  
-  &__slider-text
-    font-size: 14px
-    line-height: 20px
-    font-weight 400
-    color $base-white
-    display block
-    width 100%
-    text-align: center
-  
-  &__slider-btn
-    background: 0
-    border: 0
-    position absolute
-    bottom calc(50% - 5px)
-    z-index 1
-    display flex
-    align-items: center
-    width 6px
-    height 10px
-    cursor pointer
-    
-    &:disabled .header__btn-icon
-      fill $primary-500
-    
-  &__slider-btn--right
-    right: 15px
+	@media $xl
+		overflow: hidden
 
-  &__slider-btn--left
-    left 15px
-    transform: rotate(-180deg)
+	&__slider-container
+		padding: 0 8px 17px 8px
 
-  &__btn-icon
-    fill $base-white
-  
-  &__content
-    padding: 0 20px
-    display flex
-    justify-content: center
-  
-  &__logo
-    max-width: 152px
+		@media $lg
+			padding-bottom 24px
+
+	&__slider
+		width 100%
+		position relative
+		background-color: $primary-600
+		border-radius 4px
+		display inline-flex
+		align-items: center
+		justify-content: space-between
+		padding: 8px 15px
+
+		@media $xl
+			justify-content: center
+
+	&__slider-wrap
+		margin: 0 10px
+
+	&__slider-slide
+		width 100%
+		display flex
+
+	&__slider-text
+		font-size: 14px
+		line-height: 20px
+		font-weight 400
+		color $base-white
+		display block
+		width 100%
+		text-align: center
+
+		@media $lg
+			font-size 16px
+			line-height 24px
+
+	&__slider-btn
+		background: 0
+		border: 0
+		z-index 1
+		display flex
+		align-items: center
+		width 6px
+		height 10px
+		cursor pointer
+
+		&:disabled
+			cursor: unset
+
+		&:disabled .header__btn-icon
+			fill $primary-500
+
+	&__slider-btn--right
+		right: 15px
+
+	&__slider-btn--left
+		left 15px
+		transform: rotate(-180deg)
+
+	&__btn-icon
+		fill $base-white
+
+	&__content
+		padding: 0 20px
+		display flex
+		justify-content: center
+
+		@media $lg
+			display grid
+			grid-template-columns: 1fr 2fr 1fr
+			padding: 0 24px
+			border-bottom: 1px solid $content-200
+			padding-bottom 24px
+
+			&:not(:last-child)
+				margin-bottom 20px
+
+		@media $xl
+			width 100%
+			max-width: 1440px
+			padding: 0 112px
+			padding-bottom 24px
+			margin: 0 auto
+			position relative
+			border: 0
+
+			&::after
+				content: ''
+				position: absolute
+				bottom 0
+				left 0
+				width 200vw
+				height 1px
+				background-color: $content-200
+				transform: translate(-50%)
+
+	&__link
+		text-decoration: none
+
+	&__logo
+		max-width: 152px
+
+		@media $lg
+			margin 0 auto
+
+	&__location-link
+		display: none
+
+		@media $lg
+			display flex
+			align-items: center
+			font-size 14px
+			line-height 20px
+			color $content-500
+			font-weight 400
+			text-decoration: none
+
+	&__link-text
+		margin-left 11px
+
+	&__icons-box
+		display: none
+
+		@media $lg
+			display flex
+			justify-content: flex-end
+			align-items: center
+
+	&__icons-link
+		&:not(:last-child)
+			margin-right 45px
+
+	&__icon
+		fill: $content-900
+
+	&__menu
+		display none
+
+		@media $lg
+			display block
+			padding 0
+			margin 0
+			width 100%
+
+		@media $xl
+			margin: 0 auto
+			max-width: 1440px
+
+	&__nav
+		width 100%
+		padding: 0 24px
+
+		@media $xl
+			padding 0 112px
+
+	&__nav-list
+		list-style none
+		padding 0
+		display flex
+		justify-content: space-between
+
+	&__nav-item
+		&:not(:last-child)
+			margin-right 20px
+
+	&__nav-link
+		text-decoration: none
+		font-size 16px
+		line-height 24px
+		font-weight 500
+		color $content-900
