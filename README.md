@@ -1,4 +1,4 @@
-# TELE2 POSTCARDS
+# WowVendor
 
 Установка модульных зависимостей
 ```bash
